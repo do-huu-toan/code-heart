@@ -202,7 +202,7 @@ img {
 .play{
   width: 50%;
   height: 50%;
-  background-image: url("/play.png");
+  background-image: url("play.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
