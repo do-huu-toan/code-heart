@@ -2,8 +2,10 @@ let particles = [];
 let microparticles = [];
 
 $(document).ready(function () {
-  var audio = new Audio("./music.mp3");
-  audio.play();
+  $("#pinkboard").click(function(){
+    var audio = new Audio("https://data3.chiasenhac.com/downloads/2098/0/2097040-ad971ea4/320/Cuoi%20Nhau%20Di%20Yes%20I%20Do_%20-%20Bui%20Anh%20Tuan_%20H.mp3");
+    audio.play();
+  })
 });
 const c1 = createCanvas({
   width: $(window).width(),
