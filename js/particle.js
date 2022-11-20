@@ -276,3 +276,16 @@ var ParticlePool = (function() {
     render();
   }, 10);
 })(document.getElementById("pinkboard"));
+
+
+$(document).ready(function () {
+  $("#play").show()
+  $("#main").hide()
+  $("#play").click(function(){
+    $("#play").hide()
+    $("#main").show()
+    // $("#pinkboard").attr('height',"");
+    // $("#pinkboard").attr('width', "");
+    window.dispatchEvent(new Event('resize'));
+  })
+});

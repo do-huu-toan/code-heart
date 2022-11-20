@@ -1,12 +1,6 @@
 let particles = [];
 let microparticles = [];
 
-$(document).ready(function () {
-  $("#pinkboard").click(function(){
-    var audio = new Audio("https://data3.chiasenhac.com/downloads/2098/0/2097040-ad971ea4/320/Cuoi%20Nhau%20Di%20Yes%20I%20Do_%20-%20Bui%20Anh%20Tuan_%20H.mp3");
-    audio.play();
-  })
-});
 const c1 = createCanvas({
   width: $(window).width(),
   height: $(window).height(),
@@ -14,9 +8,9 @@ const c1 = createCanvas({
 
 const tela = c1.canvas;
 const canvas = c1.context;
-
+$("#main").append(c1.canvas);
 // $("body").append(tela);
-$("body").append(c1.canvas);
+
 
 class Particle1 {
   constructor(canvas) {
@@ -191,3 +185,16 @@ function createCanvas(properties) {
 }
 
 update();
+
+
+$(document).ready(function () {
+  $("#play").show()
+  $("#main").hide()
+  $("#play").click(function(){
+    $("#play").hide()
+    $("#main").show()
+    var audio = new Audio('music.mp3');
+    audio.play();
+    window.dispatchEvent(new Event('resize'));
+  })
+});
